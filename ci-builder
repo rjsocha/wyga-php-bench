@@ -62,7 +62,7 @@ if [[ -z ${NOLOG-} ]]; then
 fi
 
 rc=0
-echo docker buildx build ${BUILDX_CONFIG[@]} ${TAG[@]} ${ARGS[@]} -f "${DOCKERFILE}" "${CONTEXT}" || rc=1
+docker buildx build ${BUILDX_CONFIG[@]} ${TAG[@]} ${ARGS[@]} -f "${DOCKERFILE}" "${CONTEXT}" || rc=1
 exec 1>&101 2>&102
 if [[ ${rc} -eq 0 ]]
 then
