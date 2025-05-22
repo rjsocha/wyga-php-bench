@@ -7,7 +7,7 @@ elif [[ ${1-} == "all" ]] || [[ ${1-} == "max" ]]; then
   NCPU="$(nproc)"
 fi
 cd /src/php-8.2.0
-printf "COMMAND: make -j%s &>/dev/null\n" "${NCPU}"
+printf "CPU: %s\n" "${NCPU}"
 if ! make clean &>/dev/null; then
   printf -- "CLEANUP FAILED\n"
   exit 1
