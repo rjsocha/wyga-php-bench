@@ -1,0 +1,19 @@
+export NAME="php-bench"
+
+export RELEASE="latest"
+export PLATFORMS="${PLATFORMS:-linux/amd64,linux/arm64}"
+
+export DOCKER_BUILDER="multiplatform-builder"
+
+OUTPUT_IMAGE="type=image,push=true,compression=zstd,compression-level=19"
+OUTPUT_LOCAL="type=docker,compression=zstd,compression-level=19"
+
+BUILDX_CONFIG=()
+BUILDX_CONFIG+=( "--builder" "${DOCKER_BUILDER}" )
+BUILDX_CONFIG+=( "--platform" "${PLATFORMS}" )
+BUILDX_CONFIG+=( "--provenance" "false" )
+BUILDX_CONFIG+=( "--progress" "plain" )
+BUILDX_CONFIG+=( "--pull" )
+
+BUILDX_CONFIG+=( "--output" "${OUTPUT_IMAGE}" )
+unset NOLOG

@@ -1,0 +1,13 @@
+#!/bin/bash
+set -eu
+NCPU=1
+if [[ ${1-} =~ ^[0-9]+$ ]]; then
+  NCPU="${1}"
+fi
+cd /src/php-8.2.0
+printf "COMMAND: make -j%s &>/dev/null\n" "${NCPU}"
+if /usr/bin/time -o /dev/stdin --quiet -f 'RESULT: %E / %e (%S/%U)' make -j${NCPU} &>/dev/null; then
+  printf -- "OK\n"
+else
+  printf -- "FAIL\n"
+fi
