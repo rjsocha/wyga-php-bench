@@ -15,12 +15,10 @@ docker run --rm -it wyga/php-bench
 | AMD64 | Ryzen 5950X/NOHT   | 16  |     | Ubuntu 22.04 | 28.1.1 | -        | bare metal |          | 53.56   |
 | AMD64 | Ryzen 5950X        | 1   |     | Ubuntu 22.04 | 28.1.1 | -        | bare metal |          | 399.59  |
 | AMD64 | Ryzen 5950X/NOHT   | 1   |     | Ubuntu 22.04 | 28.1.1 | -        | bare metal |          | 396.74  |
-
 | AMD64 | Ryzen 7 5700G      | 16  | 64  | Ubuntu 22.04 | 28.1.1 | -        | bare metal |          | 86.43   |
 | AMD64 | Ryzen 7 5700G/NOHT | 8   |     | Ubuntu 22.04 | 28.1.1 | -        | bare metal |          | 97.08   |
 | AMD64 | Ryzen 7 5700G      | 1   |     | Ubuntu 22.04 | 28.1.1 | -        | bare metal |          | 457.01  |
 | AMD64 | Ryzen 7 5700G/NOHT | 1   |     | Ubuntu 22.04 | 28.1.1 | -        | bare metal |          | 449.01  |
-
 | AMD64 | Ryzen 7 7700       | 16  | 64  | Debian 12    | 28.1.1 | -        | bare metal |          | 50.94   |
 | AMD64 | Ryzen 7 7700/NOHT  | 8   |     | Debian 12    | 28.1.1 | -        | bare metal |          | 57.91   |
 | AMD64 | Ryzen 7 7700       | 1   |     | Debian 12    | 28.1.1 | -        | bare metal |          | 291.92  |
