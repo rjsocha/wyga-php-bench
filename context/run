@@ -12,8 +12,11 @@ if ! make clean &>/dev/null; then
   printf -- "CLEANUP FAILED\n"
   exit 1
 fi
+RESULT=/dev/null
+[[ -z ${DEBUG-} ]] || RESULT=/dev/stdout
+
 exec {STDOUT}>&1
-if /usr/bin/time -o /proc/self/fd/${STDOUT} --quiet -f 'RESULT: %E / %e (%S/%U)' make -j${NCPU} &>/dev/null; then
+if /usr/bin/time -o /proc/self/fd/${STDOUT} --quiet -f 'RESULT: %E / %e (%S/%U)' make -j${NCPU} &>"${RESULT}"; then
   printf -- "OK\n"
 else
   printf -- "FAIL\n"
