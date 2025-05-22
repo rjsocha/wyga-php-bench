@@ -13,7 +13,7 @@ if ! make clean &>/dev/null; then
   exit 1
 fi
 RESULT=/dev/null
-[[ -z ${DEBUG-} ]] || RESULT=/dev/stdout
+[[ -z ${DEBUG-} ]] || RESULT=/dev/stderr
 
 exec {STDOUT}>&1
 if /usr/bin/time -o /proc/self/fd/${STDOUT} --quiet -f 'RESULT: %E / %e (%S/%U)' make -j${NCPU} &>"${RESULT}"; then
