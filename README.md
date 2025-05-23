@@ -31,7 +31,8 @@ docker run --rm -it wyga/php-bench
 | ARM64 | Cortex-A76 (RPI 5) | 4   | 16  | U24 | 28.1.1 |          | BM         | NVME     | 720.44  |
 | ARM64 | Cortex-A76 (RPI 5) | 1   |     |     |        |          |            |          | 1214.93 |
 | ARM64 | Cortex-A76 (RPI 5) | 2   | 4   | D12 | 28.1.1 |          | VM         | KVM      | 774.53  |
-| ARM64 | Ryzen 5950x        | 2   | 4   | D12 | 28.1.1 |          | QEMU       | EMUL     |         |
+| ARM64 | Cortex-A76 (RPI 5) | 4   | 4   | D12 | 28.1.1 |          | VM         | KVM      | 748.26  |
+| ARM64 | Ryzen 5950x        | 2   | 4   | D12 | 28.1.1 |          | QEMU       | EMUL     | 4999.82 |
 | AMD64 | Ryzen 5950x        | 1   | 8   | D12 | 28.1.1 |          | VM         | KVM      | 457.40  |
 | ARM64 | Ampere(2)@2.0GHz   | 2   | 4   | D12 | 28.1.1 | 4.05 €   | VM/HETZNER | CAX11    | 514.30  |
 | ARM64 | Ampere(2)@2.0GHz   | 1   |     |     |        |          |            |          | 923.74  |
